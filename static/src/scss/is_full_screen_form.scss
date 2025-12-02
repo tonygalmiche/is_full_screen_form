@@ -1,0 +1,30 @@
+/**
+ * Styles pour le module is_full_screen_form
+ * Bouton de changement de largeur des formulaires
+ */
+
+/* Style du bouton de changement de largeur */
+.o_form_width_toggle {
+    transition: all 0.2s ease;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+    
+    i {
+        font-size: 1rem;
+    }
+}
+
+/* 
+ * Cacher le formulaire jusqu'à ce que le JS applique le style
+ * La classe .is-width-ready est ajoutée par le JS après application du style
+ */
+.o_form_view .o_form_sheet_bg:not(.is-width-ready) {
+    opacity: 0;
+}
+
+.o_form_view .o_form_sheet_bg.is-width-ready {
+    opacity: 1;
+    transition: opacity 0.1s ease;
+}
